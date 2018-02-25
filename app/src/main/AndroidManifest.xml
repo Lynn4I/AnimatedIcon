@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lynn.cc.animatedicon">
 
+    <!--创建快捷方式-->
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!--删除快捷方式-->
     <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
 
     <application
@@ -15,13 +17,15 @@
         <activity android:name="com.lynn.cc.animatedicon.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <activity android:name="com.lynn.cc.animatedicon.activity.AnimatedIconActivity"
-            android:theme="@style/Transparent">
+        <activity
+            android:name="com.lynn.cc.animatedicon.activity.AnimatedIconActivity"
+            android:theme="@style/TransparentTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

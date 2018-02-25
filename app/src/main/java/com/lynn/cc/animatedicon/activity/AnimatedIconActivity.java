@@ -38,15 +38,20 @@ public class AnimatedIconActivity extends Activity {
                 super.onAnimationEnd(animation);
                 Intent intent = new Intent(AnimatedIconActivity.this, MainActivity.class);
                 startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, 0);
                 finish();
             }
         });
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(android.R.anim.fade_in, 0);
+    }
+
     private void resetPosition(View view, Rect rect) {
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) view.getLayoutParams();
-        params.topMargin = rect.top - UIUtils.getStatusBarHeight(this);
+        params.topMargin = rect.top - UIUtils.getStatusBarHeight(this);  //需要减去statusbar高度
         params.leftMargin = rect.left;
         params.height = rect.bottom - rect.top;
         params.width = rect.right - rect.left;
