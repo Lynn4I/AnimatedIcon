@@ -5,4 +5,4 @@
 https://www.jianshu.com/p/383ebfcd5e07
 
 #### 动画效果
-![animated icon.gif](shortcut animation.gif){:height="50%" width="50%"}
+<img src="shortcut animation.gif" width="200px"/>
